@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>龙哥翻译</title>
+		<style type="text/css">
+			#bao{
+				width:500px;
+				height: 300px;
+				margin: 0 auto;
+				background-color:aliceblue;
+				border-radius: 10px;
+				border:1px solid lightpink;
+				align-content: center;
+			}
+			.top{
+				font-size: 24px;
+				color: lightskyblue;
+				text-shadow:3px 2px 5px;
+			}
+			.jieguo{
+				color: lightskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bao">
+			<p class="top">翻译是一门艺术，因为别人根本不知道你翻译的对错！</p>
+			<form action="{% url 'fanyi:index'  %}" method="post">
+				<p>输入你想翻译</p>
+				<input type="text" value="" name="keya"/>
+				<input type="submit" value="翻译"/>
+			</form>
+			<p>结果:</p>
+			<p class="jieguo">{{result}}</p>
+		</div>
+		
+	</body>
+</html>
