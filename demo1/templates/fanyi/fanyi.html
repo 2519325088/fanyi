@@ -5,7 +5,6 @@
 		<style type="text/css">
 			#bao{
 				width:500px;
-				height: 300px;
 				margin: 0 auto;
 				background-color:aliceblue;
 				border-radius: 10px;
@@ -27,7 +26,7 @@
 			<p class="top">翻译是一门艺术，因为别人根本不知道你翻译的对错！</p>
 			<form action="{% url 'fanyi:index'  %}" method="post">
 				<p>输入你想翻译</p>
-				<input type="text" value="" name="keya"/>
+				<textarea name="keya" id="" cols="30" rows="10"></textarea>
 				<input type="submit" value="翻译"/>
 			</form>
 			<p>结果:</p>
