@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bao{
+				width:500px;
+				margin: 0 auto;
+				background-color:aliceblue;
+				border-radius: 10px;
+				border:1px solid lightpink;
+				align-content: center;
+		}
+    </style>
+</head>
+<body>
+<div id="bao">
+    <p>下载音乐</p>
+    <p><a href="{% url 'fanyi:index'  %}">返回首页</a></p>
+
+    <ul>
+        {% for i in songname %}
+        <li>
+            <form action="{% url 'fanyi:xiazai' %}" method="post">
+                {{i}}
+                <input type="hidden" value="{{i}}" name="sid" >
+                <input type="submit" value="下载">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'fanyi:index'  %}">返回首页</a></p>
+</div>
+</body>
+</html>

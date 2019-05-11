@@ -24,14 +24,15 @@
 	<body>
 		<div id="bao">
 			<p class="top">翻译是一门艺术，因为别人根本不知道你翻译的对错！</p>
-			<form action="{% url 'fanyi:index'  %}" method="post">
+			<form action="{% url 'fanyi:fanyia'  %}" method="post">
 				<p>输入你想翻译</p>
 				<textarea name="keya" id="" cols="30" rows="10"></textarea>
 				<input type="submit" value="翻译"/>
 			</form>
 			<p>结果:</p>
 			<p class="jieguo">{{result}}</p>
+			<p><a href="{% url 'fanyi:index'  %}">返回首页</a></p>
 		</div>
-		
+
 	</body>
 </html>
